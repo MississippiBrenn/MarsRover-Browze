@@ -1,5 +1,6 @@
 package com.mississippibrenn;
 
+import java.sql.SQLOutput;
 import java.util.*;
 import java.lang.Math;
 
@@ -7,44 +8,67 @@ import java.lang.Math;
 // E = 1
 // S = 2
 // W = 3
-
+//Plateau:5 5
+//        Rover1 Landing:1 2 N
+//        Rover1 Instructions:LMLMLMLMM
+//        Rover2 Landing:3 3 E
+//        Rover2 Instructions:MMRMMRMRRM
 
 
 public class Rover {
 
-    String[] roverNewLocation(String landing, String instructions, String grid){
+    //top level class function
+    String roverNewLocation(String landing, String instructions, String grid){
         String[] strArray = {landing, instructions};
 
         int[] startingArray = landingLocation(landing);
         int[][] marsMap = matrixGrid(grid);
 
-        return strArray;
+        String location = roveTheRover(marsMap, startingArray, instructions);
+
+        return location;
 
     }
 
 
-    void roveTheRover(int[][] marsMap, int[] startingArray, String instructions){
-
+    String roveTheRover(int[][] marsMap, int[] startingArray, String instructions){
+        int firstx = marsMap.length;
+        int firsty = marsMap[0].length;
         int x = marsMap.length - startingArray[0];
         int y = startingArray[1];
         int facing = startingArray[2];
-
+        instructions = parseInstructions(instructions);
 
 
         for(int i = 0; i < instructions.length(); i++){
             char[] charArray = instructions.toCharArray();
 
+            //rove the rover
             if(charArray[1] == 'M') {
+
                 int[] currLocation = nextMove(x, y, facing);
                 x = currLocation[0];
                 y = currLocation[1];
             }else{
+            //rotate the rover facing
+                System.out.println(charArray[i]);
                 facing = rotateRover(facing, charArray[i]);
+            }
+
+        }
+
+        //verify input is within the map, rovers can share coordinates
+        if( x < marsMap.length-1 && y < marsMap[0].length){
+            if( x > 0 && y > 0 ){
+                //convert x back
+                x = Math.abs(x - marsMap.length);
+                return("Rover1: " + x  + y + facing );
             }
         }
 
-        //convert x back
-        x = Math.abs(x - marsMap.length);
+
+        return ("Your rover was outside of the bounds of measured Mars.  "+ "Measured Mars is only " + firstx + " by " + firsty +"."
+                + "\n" + "Your rover went to "+ "X coordinate: " + x + ", Y coordinate: " + y);
 
         //convert instructions to 00 0-5
 
@@ -84,24 +108,53 @@ public class Rover {
         return facing;
     }
 
-    int[] nextMove(int x, int y, int direction){
-         int[] newArry = new int[]{x, y, direction};
-         return newArry;
+    int[] nextMove(int x, int y, int facing){
+         int[] newArray = new int[]{x, y, facing};
+
+        switch(facing){
+            case 0 :
+                y--;
+                break;
+            case 1:
+                x++;
+                break;
+            case 2:
+                y++;
+                break;
+            case 3:
+                x--;
+                break;
+            default:
+                break;
+        }
+        newArray[0] = x;
+        newArray[1] = y;
+        return newArray;
+
+
+    }
+
+    String parseInstructions(String instructions){
+        String[] splitbyColon =  instructions.split(":");
+        return splitbyColon[1];
 
 
     }
 
     int[] landingLocation(String landing){
-        int[] myStartingArray = new int[2];
+        int[] myStartingArray = new int[3];
+
 
         try{
+
             String[] splitbyColon =  landing.split(":");
-            String[] splitbySpace = splitbyColon[0].split(" ");
+            String[] splitbySpace = splitbyColon[1].split(" ");
 
             if(splitbySpace.length == 3){
                 myStartingArray[0] = Integer.parseInt(splitbySpace[0]);
                 myStartingArray[1] = Integer.parseInt(splitbySpace[1]);
                 myStartingArray[2] = parseDirection(splitbySpace[2]);
+
 
                 return myStartingArray;
             }
@@ -114,6 +167,7 @@ public class Rover {
       return myStartingArray;
 
     }
+
 
     int parseDirection(String direction){
 

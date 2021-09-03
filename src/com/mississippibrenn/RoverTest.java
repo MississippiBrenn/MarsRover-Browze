@@ -3,6 +3,7 @@ package com.mississippibrenn;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RoverTest {
+    Rover roverTester = new Rover();
 
     @org.junit.jupiter.api.Test
     void roverNewLocation() {
@@ -16,30 +17,42 @@ class RoverTest {
 
     @org.junit.jupiter.api.Test
     void rotateRover() {
-        fail("This test not implemented");
+        int rotatedRover = roverTester.rotateRover(0, 'R');
+        assertEquals(rotatedRover, 1);
+
     }
 
     @org.junit.jupiter.api.Test
     void nextMove() {
-        fail("This test not implemented");
+        int[] currLocation = roverTester.nextMove(2, 4, 2);
+        assertEquals(currLocation[0], 2);
+        assertEquals(currLocation[1], 5);
+        assertEquals(currLocation[2], 2);
+
 
     }
 
     @org.junit.jupiter.api.Test
     void landingLocation() {
-        fail("This test not implemented");
+        int[] landing = roverTester.landingLocation("Rover2 Landing:3 3 E");
+        assertEquals(landing[0], 3);
+        assertEquals(landing[1], 3);
+        assertEquals(landing[2], 1);
 
     }
 
     @org.junit.jupiter.api.Test
     void parseDirection() {
-        fail("This test not implemented");
-
+        int north = roverTester.parseDirection("N");
+        assertEquals(north, 0);
     }
 
     @org.junit.jupiter.api.Test
     void matrixGrid() {
-        fail("This test not implemented");
+
+       int[][] matrix = roverTester.matrixGrid("Plateau:5 5");
+        assertEquals(matrix[0].length, 5);
+        assertEquals(matrix.length, 5);
 
     }
 }
