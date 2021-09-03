@@ -7,12 +7,17 @@ class RoverTest {
 
     @org.junit.jupiter.api.Test
     void roverNewLocation() {
-        fail("This test not implemented");
+        String rovedEasy = roverTester.roverNewLocation("Landing:1 2 N", "Instructions:LL", "Plateau:5 5");
+        assertEquals(rovedEasy, "Rover1: 1 2 S");
     }
 
     @org.junit.jupiter.api.Test
     void roveTheRover() {
-        fail("This test not implemented");
+        int[][] matrix = new int[5][5];
+        int[] startingArray = {1,2,0};
+        String rovedEasy = roverTester.roveTheRover(matrix, startingArray, "Instructions:LL");
+        assertEquals(rovedEasy, "Rover1: 1 2 S");
+
     }
 
     @org.junit.jupiter.api.Test

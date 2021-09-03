@@ -23,26 +23,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mississippibrenn/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mississippibrenn/Rover.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="69" column="115" selection-start-line="69" selection-start-column="115" selection-end-line="69" selection-end-column="115" />
+            <state relative-caret-position="150">
+              <caret line="10" column="101" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="101" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mississippibrenn/Rover.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="689">
+              <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mississippibrenn/RoverTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+            <state relative-caret-position="240">
+              <caret line="17" column="89" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -62,6 +62,7 @@
       <find>dependency</find>
       <find>matrixGrid</find>
       <find>direction</find>
+      <find>our data must contains only not L or</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -70,9 +71,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/mississippibrenn/RoverTest.java" />
         <option value="$PROJECT_DIR$/src/com/mississippibrenn/Main.java" />
         <option value="$PROJECT_DIR$/src/com/mississippibrenn/Rover.java" />
+        <option value="$PROJECT_DIR$/src/com/mississippibrenn/RoverTest.java" />
       </list>
     </option>
   </component>
@@ -145,29 +146,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.RoverTest.roverNewLocation">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.mississippibrenn.Main" />
       <module name="MarsRover-Browze" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoverTest.landingLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MarsRover-Browze" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mississippibrenn.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mississippibrenn" />
-      <option name="MAIN_CLASS_NAME" value="com.mississippibrenn.RoverTest" />
-      <option name="METHOD_NAME" value="landingLocation" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -183,22 +168,6 @@
       <option name="PACKAGE_NAME" value="com.mississippibrenn" />
       <option name="MAIN_CLASS_NAME" value="com.mississippibrenn.RoverTest" />
       <option name="METHOD_NAME" value="nextMove" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoverTest.parseDirection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MarsRover-Browze" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mississippibrenn.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mississippibrenn" />
-      <option name="MAIN_CLASS_NAME" value="com.mississippibrenn.RoverTest" />
-      <option name="METHOD_NAME" value="parseDirection" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -220,20 +189,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RoverTest.roveTheRover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MarsRover-Browze" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mississippibrenn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mississippibrenn" />
+      <option name="MAIN_CLASS_NAME" value="com.mississippibrenn.RoverTest" />
+      <option name="METHOD_NAME" value="roveTheRover" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoverTest.roverNewLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MarsRover-Browze" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mississippibrenn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mississippibrenn" />
+      <option name="MAIN_CLASS_NAME" value="com.mississippibrenn.RoverTest" />
+      <option name="METHOD_NAME" value="roverNewLocation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.RoverTest.parseDirection" />
-      <item itemvalue="JUnit.RoverTest.landingLocation" />
       <item itemvalue="JUnit.RoverTest.rotateRover" />
       <item itemvalue="JUnit.RoverTest.nextMove" />
+      <item itemvalue="JUnit.RoverTest.roveTheRover" />
+      <item itemvalue="JUnit.RoverTest.roverNewLocation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RoverTest.roverNewLocation" />
+        <item itemvalue="JUnit.RoverTest.roveTheRover" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.RoverTest.nextMove" />
         <item itemvalue="JUnit.RoverTest.rotateRover" />
-        <item itemvalue="JUnit.RoverTest.landingLocation" />
-        <item itemvalue="JUnit.RoverTest.parseDirection" />
       </list>
     </recent_temporary>
   </component>
@@ -251,18 +252,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RoverTest_landingLocation - 2021.09.02 at 16h 55m 20s.xml">
-      <configuration name="RoverTest.landingLocation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoverTest_landingLocation - 2021.09.02 at 16h 55m 31s.xml">
-      <configuration name="RoverTest.landingLocation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoverTest_landingLocation - 2021.09.02 at 16h 57m 22s.xml">
-      <configuration name="RoverTest.landingLocation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoverTest_rotateRover - 2021.09.02 at 17h 00m 20s.xml">
-      <configuration name="RoverTest.rotateRover" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RoverTest_rotateRover - 2021.09.02 at 17h 06m 22s.xml">
       <configuration name="RoverTest.rotateRover" configurationId="JUnit" />
     </history-entry>
@@ -280,6 +269,18 @@
     </history-entry>
     <history-entry file="RoverTest_nextMove - 2021.09.02 at 17h 32m 36s.xml">
       <configuration name="RoverTest.nextMove" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoverTest_roveTheRover - 2021.09.02 at 18h 19m 50s.xml">
+      <configuration name="RoverTest.roveTheRover" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoverTest_roveTheRover - 2021.09.02 at 18h 20m 01s.xml">
+      <configuration name="RoverTest.roveTheRover" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoverTest_roveTheRover - 2021.09.02 at 18h 23m 54s.xml">
+      <configuration name="RoverTest.roveTheRover" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RoverTest_roverNewLocation - 2021.09.02 at 18h 24m 11s.xml">
+      <configuration name="RoverTest.roverNewLocation" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -319,24 +320,24 @@
     <SUITE FILE_PATH="coverage/MarsRover_Browze$Main.ic" NAME="Main Coverage Results" MODIFIED="1630366213733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/mississippibrenn/RoverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mississippibrenn/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        <state relative-caret-position="150">
+          <caret line="10" column="101" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="101" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mississippibrenn/Rover.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="69" column="115" selection-start-line="69" selection-start-column="115" selection-end-line="69" selection-end-column="115" />
+        <state relative-caret-position="689">
+          <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mississippibrenn/RoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="89" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
         </state>
       </provider>
     </entry>

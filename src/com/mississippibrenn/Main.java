@@ -8,7 +8,7 @@ public class Main {
 
         Rover rover1 = new Rover();
 
-        System.out.println(rover1.roverNewLocation("Landing:1 2 N", "Instructions:LMLMLMLMM", "Plateau:5 5"));
+        System.out.println(rover1.roverNewLocation("Landing:1 2 N", "Instructions:LL", "Plateau:5 5"));
 
 
 //        int[][] array = rover1.matrixGrid("Plateau:5 5");

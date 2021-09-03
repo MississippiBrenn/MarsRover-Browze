@@ -34,15 +34,18 @@ public class Rover {
     String roveTheRover(int[][] marsMap, int[] startingArray, String instructions){
         int firstx = marsMap.length;
         int firsty = marsMap[0].length;
+
+        //convert x to conform to instructions
         int x = marsMap.length - startingArray[0];
         int y = startingArray[1];
         int facing = startingArray[2];
         instructions = parseInstructions(instructions);
+        char[] charArray = instructions.toCharArray();
 
 
         for(int i = 0; i < instructions.length(); i++){
-            char[] charArray = instructions.toCharArray();
 
+            System.out.println(charArray[i]);
             //rove the rover
             if(charArray[1] == 'M') {
 
@@ -51,18 +54,20 @@ public class Rover {
                 y = currLocation[1];
             }else{
             //rotate the rover facing
-                System.out.println(charArray[i]);
+
                 facing = rotateRover(facing, charArray[i]);
             }
 
         }
 
         //verify input is within the map, rovers can share coordinates
-        if( x < marsMap.length-1 && y < marsMap[0].length){
-            if( x > 0 && y > 0 ){
+        if( x < marsMap.length && y < marsMap[0].length){
+            System.out.println("here");
+            if( x >= 0 && y >= 0 ){
                 //convert x back
+                System.out.println(x);
                 x = Math.abs(x - marsMap.length);
-                return("Rover1: " + x  + y + facing );
+                return("Rover1: " + x + " "+ y + " " + facingToString(facing) );
             }
         }
 
@@ -183,9 +188,25 @@ public class Rover {
             default:
                 throw new java.lang.Error("this is not in correct format");
         }
-
-
     }
+
+    String  facingToString(int facing){
+
+        switch(facing){
+            case 0:
+                return "N";
+            case 1:
+                return "E";
+            case 2:
+                return "S";
+            case 3:
+                return "W";
+            default:
+                break;
+        }
+        return "";
+    }
+
 
 
     int[][] matrixGrid(String grid){
